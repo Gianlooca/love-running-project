@@ -26,6 +26,11 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    /* the display set on flex make the checkbox show in a row with the h1 */
+    display: flex;
+    justify-content: space-between;
+    /* This makes them align vertically */
+    align-items: baseline;
 }
 
 /* Create a style for every <a> element that's descending of the <header> 
@@ -59,7 +64,7 @@ h1 {
 
 /* Navbar styles with dropdown toggle (interruttore); the position will be absolute
 to take the element out of the normal flow of the page. The display property is set
-to none so it won't be shown until the user click to open it */
+to none so it won't be shown until the user click to open it, after adding some CSS below. */
 nav {
     position: absolute;
     background-color: #ffffff;
@@ -68,6 +73,30 @@ nav {
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
+    /* If we don't set the top property to 100%, because of the flex value we gave to the
+    parent element (in this case the header), we would see the topdown menu covering the header.
+    We can fix this by adding the top property, as we said, to 100%. This tells the <nav> that
+    the top of the element should start AT THE BOTTOM OF ITS PARENT. 0% would make it start
+    at the top of its parent, but we want it to happen at the bottom of it.*/
+    top: 100%;
+}
+
+/* Nav toggle (We use here a PSEUDO-CLASS that operates when the <input> element with "nav-toggle" id
+is checked; we use the tilde because the <nav> is the direct sibling of the <input> element. So: when 
+this is CHECKED, we want our sibling element (nav) to display. We give this a display value of "block" */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+/* We use this to make the checkbox disappear, since we can just click on the label (not directly
+on the checkbox) to make the scroll down menu work. We can also make the label larger so it's easier
+to click. We'll do it using the label class below.*/
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
 }
 
 /* Main content */

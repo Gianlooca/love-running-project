@@ -103,13 +103,19 @@ to click. We'll do it using the label class below.*/
 main {
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
-    background-color: lightblue;
     /* We're going to give a margin-top of 47px to this element in order to push down
     the content with respect to the header. Why? Because otherwise we wouldn't visualize
     it. And why? Because when we set the header position to fixed, the header HAS BEEN
     TAKEN OUT OF THE NORMAL FLOW OF THE ELEMENTS OF THE PAGE and covered the top of the
     main element.*/
     margin-top: 47px;
+}
+
+/* Hero section */
+#hero {
+    height: 600px;
+    width: 100%;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
 }
 
 /*Footer*/

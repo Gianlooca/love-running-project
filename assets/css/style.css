@@ -9,7 +9,7 @@
 }
 
 /* General styles */
-body { 
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -54,7 +54,7 @@ h1 {
     list-style-type: none;
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
 
@@ -119,6 +119,7 @@ footer {
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
     /* Header - We want to make sure that the navbar will always be displayed, hence: display: block. We
     also want the navbar inside the header, so position: relative (to the parent header). We no longer
     need the box-shadow. The width has to fit the content (it won't take all of the space in the header).
@@ -136,7 +137,7 @@ footer {
         display: flex;
     }
 
-    #menu > li {
+    #menu>li {
         /* we add some padding space on the left of every list item on the menu */
         padding-left: 1rem;
     }
@@ -151,6 +152,7 @@ footer {
         line-height: 75px;
         margin: 0 0.5rem;
     }
+
     /* Main content */
     main {
         /* Push main content down to accomodate larger header */

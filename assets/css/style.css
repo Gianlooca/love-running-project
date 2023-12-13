@@ -89,7 +89,7 @@ this is CHECKED, we want our sibling element (nav) to display. We give this a di
 }
 
 /* We use this to make the checkbox disappear, since we can just click on the label (not directly
-on the checkbox) to make the scroll down menu work. We can also make the label larger so it's easier
+on the checkbox) to make the dropdown menu work. We can also make the label larger so it's easier
 to click. We'll do it using the label class below.*/
 #nav-toggle {
     display: none;
@@ -101,9 +101,15 @@ to click. We'll do it using the label class below.*/
 
 /* Main content */
 main {
-    /*Make main element take up any surplus space to push footer down */
+    /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     background-color: lightblue;
+    /* We're going to give a margin-top of 47px to this element in order to push down
+    the content with respect to the header. Why? Because otherwise we wouldn't visualize
+    it. And why? Because when we set the header position to fixed, the header HAS BEEN
+    TAKEN OUT OF THE NORMAL FLOW OF THE ELEMENTS OF THE PAGE and covered the top of the
+    main element.*/
+    margin-top: 47px;
 }
 
 /*Footer*/

@@ -28,7 +28,9 @@ header {
     box-shadow: 0 2px 2px #3a3a3a;
 }
 
-/* Create a style for every <a> element that's descending of the <header> */
+/* Create a style for every <a> element that's descending of the <header> 
+and we are setting this particular style in order to get rid of the classic
+blue color and underline of the links */
 header a {
     text-decoration: none;
     color: inherit;
@@ -53,6 +55,19 @@ h1 {
 
 .active {
     border-bottom: 1px solid #3a3a3a;
+}
+
+/* Navbar styles with dropdown toggle (interruttore); the position will be absolute
+to take the element out of the normal flow of the page. The display property is set
+to none so it won't be shown until the user click to open it */
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
 }
 
 /* Main content */

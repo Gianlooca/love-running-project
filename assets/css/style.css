@@ -116,3 +116,32 @@ main {
 footer {
     background-color: orange;
 }
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    /* Header - We want to make sure that the navbar will always be displayed, hence: display: block. We
+    also want the navbar inside the header, so position: relative (to the parent header). We no longer
+    need the box-shadow. The width has to fit the content (it won't take all of the space in the header).
+    We'll add padding-right so our items won't stick to the edge of the screen.  */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        /* This value put the elements of the menu on a row */
+        display: flex;
+    }
+
+    #menu > li {
+        /* we add some padding space on the left of every list item on the menu */
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+}

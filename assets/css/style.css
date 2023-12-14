@@ -165,6 +165,28 @@ hr {
     margin: 5px 0;
 }
 
+#circle-cover-bg {
+    background: url("../images/reasons-image.webp") no-repeat top center/cover;
+    height: 90vw;
+    width: 90vw;
+    margin-bottom: 20px;
+    /* Make the square images into circle */
+    border-radius: 50%;
+    /* To make sure that on larger or landscape held phones the image doesn't take
+    up too much space we set a max-width and a max-height.*/
+    max-width: 300px;
+    max-height: 300px;
+}
+/*If we look at the same phone in landscape mode though the image is sticking to the
+left edge of the screen. We want the image to be centered in the screen, so we add some
+flexbox properties to the parent element of the #circle-cover-bg, that is the div 
+#benefits-image. */
+#benefits-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /*Footer*/
 #social-networks {
     text-align: center;

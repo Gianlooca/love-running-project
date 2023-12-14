@@ -253,6 +253,18 @@ flexbox properties to the parent element of the #circle-cover-bg, that is the di
     color: #fafafa;
 }
 
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+    #photos {
+        /* This property tells the browser to display the content
+        of the selected element in a certain number of columns.*/
+        column-count: 2;
+        /* This property tells the browser to display the content
+        with a certain gab between columns.*/
+        column-gap: 0;
+    }
+}
+
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
 
@@ -318,12 +330,26 @@ flexbox properties to the parent element of the #circle-cover-bg, that is the di
         text-align: end;
         align-self: flex-end;
     }
+
+    /* Gallery */
+    #photos {
+        /* This property tells the browser to display the content
+        of the selected element in a certain number of columns.*/
+        column-count: 3;
+    }
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
+    }
+
+    /* Gallery */
+    #photos {
+        /* This property tells the browser to display the content
+        of the selected element in a certain number of columns.*/
+        column-count: 4;
     }
 }
 

@@ -196,6 +196,21 @@ flexbox properties to the parent element of the #circle-cover-bg, that is the di
     justify-content: center;
 }
 
+/* Gallery page*/
+#photos img {
+    /* Setting this width, all the images in the gallery will have the same width*/
+    width: 100%;
+    line-height: 1em;
+}
+
+#photos {
+    /* There's still some white space between the picture. By default, the images
+    here are inline elements which are treated like text. Text has an automatic 
+    line height to vertically space out the lines, which is causing this white space.
+    To fix this, we set the line-height property to 0*/
+    line-height: 0;
+}
+
 /*Footer*/
 #social-networks {
     text-align: center;

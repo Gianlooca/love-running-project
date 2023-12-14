@@ -25,6 +25,15 @@ h1, h2, h3 {
     color: #252525;
 }
 
+/* We hide the "Meetup Times" text because it doesn't look good for the design
+of our page. But why do we hide it instead of removing it? Because search engines
+use types of headings to rank high sites. So we want to maintain the heading but,
+since he's not appealing, we just hide it. We created a class, and not an id,
+so we can use it more than once if needed.*/
+.hidden-heading {
+    display: none;
+}
+
 /* Header */
 header {
     background-color: #ffffff;
